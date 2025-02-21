@@ -45,3 +45,6 @@
 `sudo dnf install akmod-nvidia`
 
 `sudo dnf install xorg-x11-drv-nvidia-cuda`
+
+## DDCUTIL
+[Instructions](https://github.com/daitj/gnome-display-brightness-ddcutil?tab=readme-ov-file#setup-ddcutil)
