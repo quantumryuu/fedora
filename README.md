@@ -1,6 +1,6 @@
 # Fedora Customization
 
-### Extensions
+## Extensions
 - [Alphabetical App Grid ](https://extensions.gnome.org/extension/4269/alphabetical-app-grid/ )
 - [Appindicator Support ](https://extensions.gnome.org/extension/615/appindicator-support/ )
 - [Background Logo ](https://extensions.gnome.org/extension/7364/background-logo/ )
@@ -21,12 +21,27 @@
 - [Hide Top Bar ](https://extensions.gnome.org/extension/545/hide-top-bar/ )
 - [Disable Unredirect Fullscreen Windows ](https://extensions.gnome.org/extension/1873/disable-unredirect-fullscreen-windows/ )
 
-### Wallpaper
+## Wallpaper
 [Download](https://wallpapercave.com/download/abstract-sphere-hd-wallpapers-wp7268793])
 
-### Fonts
+## Fonts
 `sudo dnf install curl cabextract xorg-x11-font-utils fontconfig`
 
 `sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm`
 
 `sudo fc-cache -v`
+
+## Nvidia Drivers + Secure Boot
+`sudo dnf install kmodtool akmods mokutil openssl`
+
+`sudo kmodgenca -a`
+
+`sudo mokutil --import /etc/pki/akmods/certs/public_key.der`
+
+`systemctl reboot`
+
+`sudo dnf update -y`
+
+`sudo dnf install akmod-nvidia`
+
+`sudo dnf install xorg-x11-drv-nvidia-cuda`
